@@ -1,18 +1,11 @@
 buildscript {
-	ext {
-		springBootVersion = '1.5.4.RELEASE'
-	}
 	repositories {
 		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 	}
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
-apply plugin: 'org.springframework.boot'
 
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
@@ -23,6 +16,14 @@ repositories {
 
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    //compile('com.amazonaws:aws-java-sdk:1.11.145')
+    //compile('com.amazonaws:aws-java-sdk-lambda:1.11.145')
+    
+    compile('com.amazonaws:aws-lambda-java-core:1.1.0')
+    
+    testCompile('junit:junit:4.12')
+    
+
+	//testCompile('org.springframework.boot:spring-boot-starter-test')
 }
