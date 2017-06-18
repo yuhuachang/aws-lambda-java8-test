@@ -1,7 +1,7 @@
 buildscript {
-	repositories {
-		mavenCentral()
-	}
+    repositories {
+        mavenCentral()
+    }
 }
 
 apply plugin: 'java'
@@ -11,9 +11,8 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
-
 
 dependencies {
     compile('com.amazonaws:aws-lambda-java-core:1.1.0')

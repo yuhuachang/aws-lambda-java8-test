@@ -24,17 +24,15 @@ public class HelloPojoTest {
         context = mock(Context.class);
         when(context.getLogger()).thenReturn(logger);
     }
-    
+
     @Test
-	public void test() {
-		
-		RequestClass req = new RequestClass("John", "Smith");
-		
-		HelloPojo pojo = new HelloPojo();
+    public void test() {
 
-		ResponseClass res = pojo.handleRequest(req, context);
+        RequestClass req = new RequestClass("John", "Smith");
+        HelloPojo pojo = new HelloPojo();
+        ResponseClass res = pojo.handleRequest(req, context);
 
-		assertEquals("Hello John, Smith.", res.getGreetings());
-	}
+        assertEquals("Hello John, Smith.", res.getGreetings());
+    }
 
 }
