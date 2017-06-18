@@ -20,6 +20,9 @@ public class RequestClass {
 		this.lastName = lastName;
 	}
 
+	public RequestClass() {
+    }
+
 	public RequestClass(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
